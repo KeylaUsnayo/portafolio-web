@@ -7,16 +7,18 @@
     <title>Portafolio de Keyla Usnayo</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
 </head>
 
 <body>
-
     <header>
         <nav>
-            <ul>
-                <li><a href="#">INICIO</a></li>
-                <li><a href="#catalogo">CATÁLOGOS</a></li>
-                <li><a href="#contacto">CONTACTO</a></li>
+            <ul class="nav-menu">
+                <li><a class="nav-link" href="#inicio">INICIO</a></li>
+                <li><a class="nav-link" href="#proyectos">PROYECTOS</a></li>
+                <li><a class="nav-link" href="#catalogo">SOBRE MÍ</a></li>
+                <li><a class="nav-link" href="#contacto">CONTACTO</a></li>
+                <li><button id="btn-tema">CAMBIAR TEMA</button></li>
             </ul>
         </nav>
     </header>
@@ -24,13 +26,13 @@
     <main>
 
         <!-- Sección presentación -->
-        <section class="presentacion">
-            <h1>Bienvenido(a) a mi Portafolio</h1>
+        <section id="inicio" class="presentacion">
+            <h1>BIENVENIDO(A) A MI PORTAFOLIO</h1>
         </section>
         <section class="hero">
 
             <div class="hero-img">
-                <!-- solo es un bloque visual-->
+                <img id="foto-perfil" src="img/perfil.svg" alt="Foto de perfil">
             </div>
 
             <div class="hero-info">
@@ -42,64 +44,94 @@
                     backend y bases de datos.</p>
                 <div class="hero-botones">
                     <a href="#contacto" class="btn">Contacto</a>
-                    <a href="#catalogos" class="btn">Ver catálogos</a>
+                    <a href="#catalogos" class="btn">Descargar CV</a>
                 </div>
             </div>
 
         </section>
 
-        <!-- Sección catalogo -->
-        <section id="catalogo">
-            <h2>CATÁLOGOS</h2>
-
-            <div class="contenedor-catalogos">
-
-                <article class="catalogo-card">
-                    <div class="catalogo-img">
-                        <span class="catalogo-titulo">SOBRE MÍ</span>
-                    </div>
-                    <p class="catalogo-desc">
-                        Descripción breve del catalogo 1.
-                    </p>
-                    <a href="#" class="btn-card">Ver más</a>
-                </article>
-
-
-                <article class="catalogo-card">
-                    <div class="catalogo-img">
-                        <span class="catalogo-titulo">PROYECTOS</span>
-                    </div>
-                    <p class="catalogo-desc">
-                        Descripción breve del catalogo 2.
-                    </p>
-                    <a href="#" class="btn-card">Ver más</a>
-                </article>
-
-                <article class="catalogo-card">
-                    <div class="catalogo-img">
-                        <span class="catalogo-titulo">ESTUDIOS</span>
-                    </div>
-                    <p class="catalogo-desc">
-                        Descripción breve del catalogo 3.
-                    </p>
-                    <a href="#" class="btn-card">Ver más</a>
-                </article>
-
-                <article class="catalogo-card">
-                    <div class="catalogo-img">
-                        <span class="catalogo-titulo">HABILIDADES</span>
-                    </div>
-                    <p class="catalogo-desc">
-                        Descripción breve del catalogo 4.                    
-                    </p>
-                    <a href="#" class="btn-card">Ver más</a>
-                </article>
+        <!-- Sección proyectos -->
+        <section id="proyectos">
+            <h2>MIS PROYECTOS</h2>
+            <div id="contenedor-proyectos">
+                <!-- Card para consumir API -->
+                <div class="proyecto-card">
+                    <h3>Nombre Proyecto 1</h3>
+                    <p>Descripción breve del proyecto.</p>
+                    <a href="#" class="btn-proyecto">
+                        Ver proyecto
+                    </a>
+                </div>
 
             </div>
         </section>
 
+        <!-- Sección sobre mi -->
+        <section id="catalogo">
+            <h2>MÁS SOBRE MÍ</h2>
+            <div class="contenedor-catalogos">
+                <article class="catalogo-card">
+                    <img src="img/sobremi.svg" class="catalogo-img" alt="¿Quién soy?">
+                    <h3 class="catalogo-titulo">¿QUIÉN SOY?</h3>
+                    <p class="descripcion">
+                        Me considero una persona proactiva, responsable y creativa, con interés en el desarrollo web...
+                        <span class="extra-texto">
+                            y el aprendizaje continuo, actualmente me encuentro complementando mi formación con estudios
+                            técnicos para seguir creciendo profesionalmente en el área tecnológica.
+                        </span>
+                        <span class="ver-mas" >Ver más</span>
+                    </p>
+                </article>
+                <article class="catalogo-card">
+                    <img src="img/educacion.svg" class="catalogo-img" alt="Educación">
+                    <h3 class="catalogo-titulo">EDUCACIÓN</h3>
+                    <p class="descripcion">
+                        Soy Licenciada en Ingeniería de Sistemas Informáticos por la Universidad del Valle (2019–2022)...
+                        <span class="extra-texto">
+                            donde obtuve el reconocimiento al Mejor Promedio en la Gestión II de 2020. Actualmente
+                            complemento mi formación con estudios de inglés en el Instituto Técnico First Class. Previamente
+                            realicé mis estudios de bachillerato en la Unidad Educativa Madre María Federica.
+                        </span>
+                        <span class="ver-mas">Ver más</span>
+                    </p>
+                </article>
+                <article class="catalogo-card">
+                    <img src="img/cursos.svg" class="catalogo-img" alt="Cursos">
+                    <h3 class="catalogo-titulo">CURSOS Y CERTIFICACIONES</h3>
+                    <p class="descripcion">
+                        He complementado mi formación académica con diversos cursos y certificaciones en tecnología y
+                        metodologías ágiles...
+                        <span class="extra-texto">
+                            Entre ellos destacan los programas de redes y programación de Cisco, como
+                            CCNA: Introduction to Networks, Routing and Switching Essentials y Programming Essentials in
+                            Python. También he participado en espacios de aprendizaje y colaboración como el Agile Change
+                            Agent Workshop de la Universidad del Valle, Scrum Gathering Bolivia y el evento FLISOL. Además,
+                            representé a la Universidad del Valle y a Bolivia en el Desafío Ada Lovelace, una iniciativa
+                            impulsada por Oracle y la ONU. En el ámbito académico, también me desempeñé como ayudante de la
+                            materia Programación I.
+                        </span>
+                        <span class="ver-mas">Ver más</span>
+                    </p>
+                </article>
+                <article class="catalogo-card">
+                    <img src="img/habilidades.svg" class="catalogo-img" alt="Habilidades">
+                    <h3 class="catalogo-titulo">HABILIDADES</h3>
+                    <p class="descripcion">
+                        Cuento con experiencia en desarrollo web utilizando tecnologías como HTML, CSS, Bootstrap,
+                        JavaScript, PHP, C# y el framework Laravel...
+                        <span class="extra-texto">
+                            También manejo bases de datos como PostgreSQL, MySQL
+                            y SQL Server, así como herramientas de control de versiones como Git y GitHub, trabajando
+                            habitualmente en entornos como Visual Studio Code. A nivel personal, me caracterizo por la
+                            responsabilidad, la proactividad, la creatividad y la capacidad de trabajar en equipo, además de
+                            una comunicación efectiva y una constante disposición al aprendizaje y la adaptación.
+                        </span>
+                        <span class="ver-mas">Ver más</span>
+                    </p>    
+                </article>
+            </div>
 
-
+        </section>
     </main>
 
     <footer>
@@ -107,7 +139,8 @@
         <section id="contacto">
             <h2>Contacto</h2>
             <div class="redes">
-                <a href="https://www.linkedin.com/" target="_blank" aria-label="LinkedIn">
+                <a href="www.linkedin.com/in/keyla-paola-usnayo-aguilar-00887b208" target="_blank"
+                    aria-label="LinkedIn">
                     <i class="fa-brands fa-linkedin"></i>
                 </a>
                 <a href="https://www.facebook.com/" target="_blank" aria-label="Facebook">
@@ -129,7 +162,7 @@
         </section>
         <p>© 2026 Keyla Paola Usnayo Aguilar - Todos los derechos reservados</p>
     </footer>
-
+    <script src="script.js"></script>
 </body>
 
 </html>
